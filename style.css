@@ -1,0 +1,62 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contactInfo{
+    background-color: rebeccapurple;
+}
+
+#forfixtext{
+    text-align: justify;
+    opacity: 0.8;
+}
+
+#forpaddingTop{
+    margin-bottom: 40px;
+}
+
+#Forundo{
+    display: none;
+    text-align: center !important;
+}
+
+@media (max-width: 1023px){
+    #addonForcenter{
+        text-align: center;
+    }
+    #forIcons{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 767px){
+    #topbanner{
+        display: flex;
+        flex-direction: column;
+    }
+
+     #formargin{
+        margin-left: 0 auto;
+        
+    }
+
+    #smalltext{
+        font-size: 11px;
+    }
+    #footeratMobile{
+        font-size: 10px;
+    }
+
+    #Forundo{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #addonForcenter{
+        display: none;
+    }
+  
+}
