@@ -58,6 +58,65 @@ body{
     #addonForcenter1{
         display: none;
     }
-  
+}
 
+#scroll-text {
+  position: absolute;
+  left: 100%;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  top: 0;
+}
+@media (min-width: 768px) {
+  #scroll-text {
+    font-size: 1rem;
+  }
+}
+
+/* Font for both texts */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Popup animation (international style: soft bounce) */
+@keyframes pop {
+  0%   { transform: scale(0.9); opacity: 0; }
+  70%  { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop {
+  animation: pop 0.5s ease-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.offer-heading {
+  font-family: 'Poppins', sans-serif;
+  animation: pop 0.5s ease-out, pulse 2s ease-in-out infinite;
+}
+
+/* Mobile menu active states */
+#mobile-menu details summary.text-yellow-700 {
+  color: #b45309 !important;
+  font-weight: 600 !important;
+}
+
+/* Desktop dropdown active room item */
+nav .relative.group ul li a.text-yellow-700 {
+  color: #b45309 !important;
+  font-weight: 600 !important;
+  background-color: #fef3c7 !important;
+}
+
+/* Hide mobile menu on desktop sizes */
+@media (min-width: 768px) {
+  #mobile-menu {
+    transform: translateX(-100%) !important;
+  }
+  #overlay {
+    display: none !important;
+  }
 }
