@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17042477829"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17042477829');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -15,6 +24,9 @@
   <script src="script.js" defer></script>
 
   <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body class="font-sans bg-gray-50">
 
@@ -23,7 +35,7 @@
     <!-- Top Banner -->
     <div id="topbanner" class="bg-yellow-600 text-white text-center py-2 flex justify-center items-center gap-4">
       
-      <button class="border border-white px-4 py-1 rounded hover:bg-yellow-700"><a href="https://wa.me/923001260309?text=Hi%20I%20want%20to%20get%20room" target="_blank">BOOK NOW</a></button>
+      <button class="border border-white px-4 py-1 rounded hover:bg-yellow-700"><a href="https://wa.me/923001260309?text=Hi,%20Blue%20Sky%20Hotel.%20I%20want%20to%20Book%20a%20Room%20at%20your%20Hotel." target="_blank">BOOK NOW</a></button>
     </div>
 
     <!-- Navbar -->
@@ -45,29 +57,25 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div class="absolute left-0 hidden group-hover:block bg-white border mt-2 shadow-lg w-56">
-              <ul class="text-gray-700">
-                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="masterroom.html" target="_blank">Deluxe Master Bedroom</a></li>
-                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="twinroom.html" target="_blank">Deluxe Twin Bedroom</a></li>
-                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="tripletroom.html" target="_blank">Deluxe Triplet Bedroom</a></li>
-                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="familyroom.html" target="_blank">Deluxe Family Bedroom</a></li>
-              </ul>
+            <!-- Added invisible padding bridge to prevent gap -->
+            <div class="absolute left-0 top-full pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              <div class="bg-white border shadow-lg w-56 pointer-events-auto">
+                <ul class="text-gray-700">
+                  <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="masterroom.html" target="_blank">Deluxe Master Bedroom</a></li>
+                  <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="twinroom.html" target="_blank">Deluxe Twin Bedroom</a></li>
+                  <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="tripletroom.html" target="_blank">Deluxe Triplet Bedroom</a></li>
+                  <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="familyroom.html" target="_blank">Deluxe Family Bedroom</a></li>
+                </ul>
+              </div>
             </div>
           </div>
+
 
         
           <a href="#contact" class="text-gray-700  hover:text-yellow-800">Contact</a>
 
 
         </nav>
-
-        <!--
-         <button>
-            <svg class="w-5 h-5 text-gray-600 hover:text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </button>
-        -->
 
         <!-- Mobile Menu Icon -->
         <button id="menu-btn" class="md:hidden text-gray-700">
@@ -91,21 +99,38 @@
     </div>
     <nav class="flex flex-col p-4 space-y-4 text-gray-700">
       <a href="index.html" class="hover:text-yellow-700" onclick="closeMenu()">Home</a>
+      
       <details class="group">
-        <summary class="cursor-pointer hover:text-yellow-700">Rooms</summary>
-        <ul class="pl-4 mt-2 space-y-2">
-          <li><a href="masterroom.html" onclick="closeMenu()">Deluxe Master Bedroom</a></li>
-          <li><a href="twinroom.html" onclick="closeMenu()">Deluxe Twin Bedroom</a></li>
-          <li><a href="tripletroom.html" onclick="closeMenu()">Deluxe Triplet Bedroom</a></li>
-          <li><a href="familyroom.html" onclick="closeMenu()">Deluxe Family Bedroom</a></li>
-        </ul>
-      </details>
+      <summary class="cursor-pointer hover:text-yellow-700 transition-colors duration-200">Rooms</summary>
+      <ul class="pl-4 mt-2 space-y-2">
+        <li><a href="masterroom.html" class="transition-colors duration-200" onclick="closeMenu()">Deluxe Master Bedroom</a></li>
+        <li><a href="twinroom.html" class="transition-colors duration-200" onclick="closeMenu()">Deluxe Twin Bedroom</a></li>
+        <li><a href="tripletroom.html" class="transition-colors duration-200" onclick="closeMenu()">Deluxe Triplet Bedroom</a></li>
+        <li><a href="familyroom.html" class="transition-colors duration-200" onclick="closeMenu()">Deluxe Family Bedroom</a></li>
+      </ul>
+    </details>
+
       <a href="#contact" class="hover:text-yellow-700" onclick="closeMenu()">Contact</a>
     </nav>
   </div>
 
   <!-- Overlay -->
   <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-40"></div>
+
+  <!--Offers-->
+
+  <div class="bg-white text-gray-700 text-center py-2 md:py-2">
+    <!-- Animated Popup Heading -->
+    <h3 class="offer-heading text-sm md:text-base font-semibold mb-1 inline-block bg-orange-500 text-white px-3 py-1 rounded animate-pop">
+      Limited Time Offer
+    </h3>
+
+    <!-- Scrolling Offer Text -->
+    <div class="offer-container relative overflow-hidden w-4/5 mx-auto h-5 md:h-8 mt-1">
+      <div id="scroll-text" class="text-yellow-700 absolute whitespace-nowrap font-poppins"></div>
+    </div>
+  </div>
+
 
   <!-- Background Hero Section -->
   <section class="relative h-screen">
@@ -173,7 +198,7 @@
         </div>
 
         <div style="display: flex; justify-content:center; margin-top:30px">
-            <button class="bg-yellow-600 text-white px-4 py-1 rounded hover:bg-yellow-700"><a href="https://wa.me/923001260309?text=Hi%20I%20want%20to%20get%20room" target="_blank">BOOK NOW</a></button>
+            <button class="bg-yellow-600 text-white px-4 py-1 rounded hover:bg-yellow-700"><a href="https://wa.me/923001260309?text=Hi,%20Blue%20Sky%20Hotel.%20I%20want%20to%20Book%20a%20Room%20at%20your%20Hotel." target="_blank">BOOK NOW</a></button>
         </div>
     </section>
 
@@ -376,12 +401,13 @@
 
     <!-- FOOTER -->
     <footer class="bg-[#323232] text-gray-300 text-center py-4">
-              <button id="forpaddingTop" class="bg-yellow-700 border border-white px-4 py-1 rounded hover:bg-yellow-800"><a href="https://wa.me/923001260309?text=Hi%20I%20want%20to%20get%20room" target="_blank">BOOK NOW</a></button>
+              <button id="forpaddingTop" class="bg-yellow-700 border border-white px-4 py-1 rounded hover:bg-yellow-800"><a href="https://wa.me/923001260309?text=Hi,%20Blue%20Sky%20Hotel.%20I%20want%20to%20Book%20a%20Room%20at%20your%20Hotel." target="_blank">BOOK NOW</a></button>
 
       <hr class=" w-4/5 mx-auto border-t border-white/10 my-2">
       <p id="footeratMobile" class="text-sm">
         © 2025 Blue Sky Hotel. All rights reserved. | Developed by 
-        <span class=" font-semibold">N<span class="text-orange-500">O</span>FL<span class="text-orange-500">I</span>CK</span>
+        <a href="http://www.noflick.com" target="_blank"><span class=" font-semibold">N<span class="text-orange-500">O</span>FL<span class="text-orange-500">I</span>CK</span>
+        </a>
       </p>
     </footer>
 
@@ -406,7 +432,10 @@
     closeBtn.addEventListener('click', closeMenu);
     overlay.addEventListener('click', closeMenu);
 
+   
   </script>
+
+  
 
 </body>
 </html>
